@@ -1,0 +1,11 @@
+{
+  "ro": {
+    "animal": ["zebra", "girafa", "pisica", "gorila"],
+    "proiect": ["proiect", "programare", "orientata", "obiect"]
+  },
+  "en": {
+    "car": ["dacia", "ford", "tesla"],
+    "language": ["romanian", "english", "italian"],
+    "fruit": ["apple", "pear", "banana", "orange"]
+  }
+}

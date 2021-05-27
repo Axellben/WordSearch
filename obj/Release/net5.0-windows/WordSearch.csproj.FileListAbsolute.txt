@@ -1,0 +1,17 @@
+C:\Users\cretu\source\repos\WordSearch\bin\Release\net5.0-windows\WordSearch.exe
+C:\Users\cretu\source\repos\WordSearch\bin\Release\net5.0-windows\WordSearch.deps.json
+C:\Users\cretu\source\repos\WordSearch\bin\Release\net5.0-windows\WordSearch.runtimeconfig.json
+C:\Users\cretu\source\repos\WordSearch\bin\Release\net5.0-windows\WordSearch.runtimeconfig.dev.json
+C:\Users\cretu\source\repos\WordSearch\bin\Release\net5.0-windows\WordSearch.dll
+C:\Users\cretu\source\repos\WordSearch\bin\Release\net5.0-windows\ref\WordSearch.dll
+C:\Users\cretu\source\repos\WordSearch\bin\Release\net5.0-windows\WordSearch.pdb
+C:\Users\cretu\source\repos\WordSearch\obj\Release\net5.0-windows\WordSearch.WordSearch.resources
+C:\Users\cretu\source\repos\WordSearch\obj\Release\net5.0-windows\WordSearch.csproj.GenerateResource.cache
+C:\Users\cretu\source\repos\WordSearch\obj\Release\net5.0-windows\WordSearch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cretu\source\repos\WordSearch\obj\Release\net5.0-windows\WordSearch.AssemblyInfoInputs.cache
+C:\Users\cretu\source\repos\WordSearch\obj\Release\net5.0-windows\WordSearch.AssemblyInfo.cs
+C:\Users\cretu\source\repos\WordSearch\obj\Release\net5.0-windows\WordSearch.csproj.CoreCompileInputs.cache
+C:\Users\cretu\source\repos\WordSearch\obj\Release\net5.0-windows\WordSearch.dll
+C:\Users\cretu\source\repos\WordSearch\obj\Release\net5.0-windows\ref\WordSearch.dll
+C:\Users\cretu\source\repos\WordSearch\obj\Release\net5.0-windows\WordSearch.pdb
+C:\Users\cretu\source\repos\WordSearch\obj\Release\net5.0-windows\WordSearch.genruntimeconfig.cache
