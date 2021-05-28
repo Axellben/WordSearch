@@ -22,11 +22,6 @@ namespace WordSearch {
   }
 
   class Words {
-
-    private const int MAX_LENGTH = 10;
-    private const int MIN_LENGTH = 3;
-
-
     private List<string> Languages = new List<string>();
     private List<CategoryEntity> CategoriesList = new List<CategoryEntity>();
     private List<WordEntity> WordsList = new List<WordEntity>();
@@ -58,13 +53,9 @@ namespace WordSearch {
 
         if (jObject != null) {
           foreach (JProperty lan in jObject.OfType<JProperty>()) {
-            //MessageBox.Show($"{prop.Name}");
             Languages.Add(lan.Name.ToUpper());
 
-
-
             foreach (JProperty category in jObject[lan.Name].OfType<JProperty>()) {
-              //MessageBox.Show("ID :");
               CategoryEntity Category = new CategoryEntity();
               Category.Language = lan.Name.ToUpper();
               Category.Category = category.Name.ToUpper();
@@ -80,19 +71,6 @@ namespace WordSearch {
               }
             }
 
-            /*
-            JArray categories = (JArray)jObject[lan.Name];
-            if (categories != null) {
-              foreach (var item in categories) {
-                MessageBox.Show("ID :");
-
-                //Console.WriteLine("company Id :" + item["companyid"]);
-                // Console.WriteLine("company Name :" + item["companyname"].ToString());
-              }
-
-            }
-            */
-
           }
         }
 
@@ -100,7 +78,7 @@ namespace WordSearch {
 
 
       } catch (Exception Ex) {
-        //MessageBox.Show("An error occurred in 'ReadWordsFromFile' method of 'LoadWords' form. Error msg: " + Ex.Message);
+        MessageBox.Show("An error occurred in 'LoadCategoriesAndWords' method of 'Words' form. Error msg: " + Ex.Message);
       }
     }
   }

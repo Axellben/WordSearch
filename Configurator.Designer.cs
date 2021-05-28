@@ -30,11 +30,11 @@ namespace WordSearch {
       this.languagesComboBox = new System.Windows.Forms.ComboBox();
       this.wordsListView = new System.Windows.Forms.ListView();
       this.label3 = new System.Windows.Forms.Label();
-      this.textBox1 = new System.Windows.Forms.TextBox();
+      this.numberRowsTextBox = new System.Windows.Forms.TextBox();
       this.label4 = new System.Windows.Forms.Label();
-      this.textBox2 = new System.Windows.Forms.TextBox();
+      this.minCharTextBox = new System.Windows.Forms.TextBox();
       this.label5 = new System.Windows.Forms.Label();
-      this.textBox3 = new System.Windows.Forms.TextBox();
+      this.maxCharTextBox = new System.Windows.Forms.TextBox();
       this.label6 = new System.Windows.Forms.Label();
       this.playBtn = new System.Windows.Forms.Button();
       this.SuspendLayout();
@@ -97,13 +97,13 @@ namespace WordSearch {
       this.label3.TabIndex = 5;
       this.label3.Text = "Number of rows/cols";
       // 
-      // textBox1
+      // numberRowsTextBox
       // 
-      this.textBox1.Location = new System.Drawing.Point(256, 255);
-      this.textBox1.Name = "textBox1";
-      this.textBox1.Size = new System.Drawing.Size(100, 27);
-      this.textBox1.TabIndex = 6;
-      this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+      this.numberRowsTextBox.Location = new System.Drawing.Point(256, 255);
+      this.numberRowsTextBox.Name = "numberRowsTextBox";
+      this.numberRowsTextBox.Size = new System.Drawing.Size(100, 27);
+      this.numberRowsTextBox.TabIndex = 6;
+      this.numberRowsTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       // 
       // label4
       // 
@@ -114,13 +114,13 @@ namespace WordSearch {
       this.label4.TabIndex = 7;
       this.label4.Text = "Words";
       // 
-      // textBox2
+      // minCharTextBox
       // 
-      this.textBox2.Location = new System.Drawing.Point(256, 325);
-      this.textBox2.Name = "textBox2";
-      this.textBox2.Size = new System.Drawing.Size(100, 27);
-      this.textBox2.TabIndex = 9;
-      this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+      this.minCharTextBox.Location = new System.Drawing.Point(256, 325);
+      this.minCharTextBox.Name = "minCharTextBox";
+      this.minCharTextBox.Size = new System.Drawing.Size(100, 27);
+      this.minCharTextBox.TabIndex = 9;
+      this.minCharTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       // 
       // label5
       // 
@@ -131,13 +131,13 @@ namespace WordSearch {
       this.label5.TabIndex = 8;
       this.label5.Text = "Minimum no of chars";
       // 
-      // textBox3
+      // maxCharTextBox
       // 
-      this.textBox3.Location = new System.Drawing.Point(256, 389);
-      this.textBox3.Name = "textBox3";
-      this.textBox3.Size = new System.Drawing.Size(100, 27);
-      this.textBox3.TabIndex = 11;
-      this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+      this.maxCharTextBox.Location = new System.Drawing.Point(256, 389);
+      this.maxCharTextBox.Name = "maxCharTextBox";
+      this.maxCharTextBox.Size = new System.Drawing.Size(100, 27);
+      this.maxCharTextBox.TabIndex = 11;
+      this.maxCharTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
       // 
       // label6
       // 
@@ -157,6 +157,7 @@ namespace WordSearch {
       this.playBtn.TabIndex = 12;
       this.playBtn.Text = "PLAY";
       this.playBtn.UseVisualStyleBackColor = true;
+      this.playBtn.Click += new System.EventHandler(this.playBtn_Click);
       // 
       // Configurator
       // 
@@ -165,12 +166,12 @@ namespace WordSearch {
       this.BackColor = System.Drawing.Color.White;
       this.ClientSize = new System.Drawing.Size(784, 761);
       this.Controls.Add(this.playBtn);
-      this.Controls.Add(this.textBox3);
+      this.Controls.Add(this.maxCharTextBox);
       this.Controls.Add(this.label6);
-      this.Controls.Add(this.textBox2);
+      this.Controls.Add(this.minCharTextBox);
       this.Controls.Add(this.label5);
       this.Controls.Add(this.label4);
-      this.Controls.Add(this.textBox1);
+      this.Controls.Add(this.numberRowsTextBox);
       this.Controls.Add(this.label3);
       this.Controls.Add(this.wordsListView);
       this.Controls.Add(this.languagesComboBox);
@@ -196,11 +197,11 @@ namespace WordSearch {
     private System.Windows.Forms.ComboBox languagesComboBox;
     private System.Windows.Forms.ListView wordsListView;
     private System.Windows.Forms.Label label3;
-    private System.Windows.Forms.TextBox textBox1;
+    private System.Windows.Forms.TextBox numberRowsTextBox;
     private System.Windows.Forms.Label label4;
-    private System.Windows.Forms.TextBox textBox2;
+    private System.Windows.Forms.TextBox minCharTextBox;
     private System.Windows.Forms.Label label5;
-    private System.Windows.Forms.TextBox textBox3;
+    private System.Windows.Forms.TextBox maxCharTextBox;
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Button playBtn;
   }

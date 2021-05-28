@@ -27,7 +27,6 @@ namespace WordSearch {
         WordsList = WordsObj.GetWords();
         Languages = WordsObj.GetLanguages();
         languagesComboBox.DataSource = Languages;
-        //categoryComboBox.DataSource = Categories;
       } catch (Exception Ex) {
         MessageBox.Show("An error occurred in 'LoadWords' method of 'LoadWords' form. Error msg: " + Ex.Message);
       }
@@ -37,8 +36,7 @@ namespace WordSearch {
 
     private void languagesComboBox_SelectedIndexChanged(object sender, EventArgs e) {
       try {
-        //categoryComboBox.DataSource = "";
-        //WordsListView.Clear();
+
         categoriesComboBox.DataSource = null;
 
         List<string> categories = new List<string>();
@@ -63,5 +61,51 @@ namespace WordSearch {
         MessageBox.Show("An error occurred in CategoryComboBox. Error msg: " + Ex.Message);
       }
     }
+
+    private void playBtn_Click(object sender, EventArgs e) {
+
+      try {
+        int nRows = Convert.ToInt32(numberRowsTextBox.Text);
+        int maxChar = Convert.ToInt32(maxCharTextBox.Text);
+        int minChar = Convert.ToInt32(minCharTextBox.Text);
+
+
+        if (!(minChar <= maxChar && maxChar <= nRows)) {
+          throw new Exception("Minimum no of chars must be <= than Maximum no of chars and Maximum no of chars must be <= thab Number of rows/cols");
+        }
+
+
+
+        List<WordEntity> WordsInCategory = WordsList.FindAll(p => p.Category.Equals(categoriesComboBox.Text) &&
+                                                                  p.Word.Length >= minChar &&
+                                                                  p.Word.Length <= maxChar);
+        List<string> Words = new List<string>();
+        foreach (WordEntity WordStr in WordsInCategory)
+          Words.Add(WordStr.Word);
+
+        if (Words.Count == 0) {
+          throw new Exception("Game cannot be played with 0 words please modify the fields");
+
+        }
+
+        WordSearch WordSearchObj = new WordSearch(Words, categoriesComboBox.Text, nRows, minChar, maxChar);
+        WordSearchObj.Show();
+
+      } catch (Exception Ex) {
+        if (Ex.Message == "Minimum no of chars must be <= than Maximum no of chars and Maximum no of chars must be <= thab Number of rows/cols") {
+          MessageBox.Show(Ex.Message);
+
+        } else if (Ex.Message == "Game cannot be played with 0 words please modify the fields") {
+          MessageBox.Show(Ex.Message);
+
+        } else {
+          MessageBox.Show("All fields are required" + Ex.Message);
+        }
+
+      }
+    }
+
+
   }
+
 }
